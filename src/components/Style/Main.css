@@ -1,0 +1,141 @@
+button {
+  margin-bottom: 20px;
+}
+
+
+
+.fade-enter-from {
+  opacity: 0;
+}
+
+
+.recherche {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.fade-enter-active {
+  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-leave-from {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.v-enter-from {
+  opacity: 0;
+}
+
+.v-enter-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-to {
+  opacity: 1;
+}
+
+.v-leave-from {
+  opacity: 1;
+}
+
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-leave-to {
+  opacity: 0;
+}
+
+.listtitle {
+  display: flex;
+  justify-content: left;
+  padding-left: 15px;
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.liSte {
+  height: 300px;
+  overflow: auto;
+
+}
+
+.array {
+  width: 500px;
+  margin-top: 10px;
+  margin-top: 50px;
+}
+
+.form {
+  width: 370px;
+  padding: 35px;
+  padding-top: 0px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 50px;
+  height: 450px;
+
+}
+
+
+
+
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80vh;
+
+}
+
+.Titre {
+  text-align: center;
+  font-size: 3.5vh;
+}
+
+.valider {
+  display: flex;
+  justify-content: space-around;
+}
+
+h5 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+
+.date {
+  font-size: 14px;
+}
+
+
+.Enregistrer:hover {
+  background-color: white;
+  color: rgb(13, 87, 226);
+  border: 1px rgb(13, 87, 226) solid;
+  font-weight: bold;
+
+}
+
+
+.Enregistrer {
+  font-weight: bold;
+  height: 15%;
+}

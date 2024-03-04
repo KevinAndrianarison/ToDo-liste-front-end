@@ -1,0 +1,105 @@
+.showModal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(92, 90, 90, 0.591);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(43, 38, 38, 0.285);
+}
+
+.Modifier:hover {
+  background-color: white;
+  color: rgb(13, 87, 226);
+  border: 1px rgb(13, 87, 226) solid;
+  font-weight: bold;
+
+}
+
+.Modifier {
+  font-weight: bold;
+  height: 15%;
+}
+
+
+.formModal {
+  width: 370px;
+  margin: 50px auto;
+  background: rgb(255, 255, 255);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 12;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Annuller {
+  color: white;
+  font-weight: bold;
+  height: 15%;
+}
+
+.Annuller:hover {
+  background-color: white;
+  color: rgb(255, 183, 0);
+  border: 1px rgb(255, 183, 0) solid;
+}
+
+
+.valider {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.fade-enter-active {
+  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-leave-from {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+.v-enter-from {
+  opacity: 0;
+}
+
+.v-enter-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-to {
+  opacity: 1;
+}
+
+.v-leave-from {
+  opacity: 1;
+}
+
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-leave-to {
+  opacity: 0;
+}

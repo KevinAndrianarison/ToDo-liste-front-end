@@ -1,0 +1,75 @@
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.red {
+    text-decoration: line-through;
+    color: rgba(211, 198, 15, 0.734);
+    font-weight: 600;
+}
+
+.btn-primary {
+    margin-right: 15px;
+}
+
+.content {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    height: 50%;
+
+}
+
+.title {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.check {
+    width: 7%;
+    margin-top: 10px;
+}
+
+.buttonStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50%;
+    margin-top: 8%;
+}
+
+.Modifier:hover {
+    background-color: white;
+    color: rgb(13, 87, 226);
+    border: 1px rgb(13, 87, 226) solid;
+    font-weight: bold;
+
+}
+
+.Modifier {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.Supprimer:hover {
+    background-color: white;
+    color: rgb(217, 14, 14);
+    border: 1px rgb(217, 14, 14) solid;
+    font-weight: bold;
+}
+
+.Supprimer {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.date {
+    font-size: 12px;
+}
