@@ -1,7 +1,6 @@
 <script setup>
 import { defineProps } from "vue";
 import { useToDo } from "@/stores/ToDo";
-/// DEFINITION DES VARIABLES
 const ToDo = useToDo();
 
 defineProps(["id", "tabTask", "date", "status"]);

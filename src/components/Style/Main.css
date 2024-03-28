@@ -13,7 +13,6 @@ button {
   width: 300px;
   margin: 0 auto;
   font-size: 14px;
-  margin-top: 5px;
 }
 
 .fade-enter-active {
@@ -64,7 +63,6 @@ button {
   display: flex;
   justify-content: left;
   padding-left: 15px;
-  margin-top: 15px;
   font-weight: 700;
 }
 
@@ -76,8 +74,8 @@ button {
 
 .array {
   width: 500px;
-  margin-top: 10px;
   margin-top: 50px;
+  padding-bottom: 50px;
 }
 
 .form {

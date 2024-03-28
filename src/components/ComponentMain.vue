@@ -69,7 +69,7 @@ onBeforeMount(() => {
         placeholder="Rechercher ici..."
       />
       <div class="listtitle">
-        <h5 class="mt-4">Liste des tâches :</h5>
+        <h5>Liste des tâches :</h5>
       </div>
       <div class="liSte">
         <ul class="list-group mt-2">
@@ -103,7 +103,7 @@ onBeforeMount(() => {
         placeholder="Rechercher ici..."
       />
       <div class="listtitle">
-        <h5 class="mt-4">Liste des tâches :</h5>
+        <h5>Liste des tâches :</h5>
       </div>
       <ul class="liSte list-group mt-4">
         <TransitionGroup tag="ul" name="fade" class="container">

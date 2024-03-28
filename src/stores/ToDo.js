@@ -24,7 +24,6 @@ export const useToDo = defineStore("ToDo", () => {
     axios
       .get(`${URL}/api/todo`)
       .then((response) => {
-        console.log("Succes du GET All :", response);
         tabTasks.value = response.data;
       })
       .catch((error) => {
@@ -35,7 +34,7 @@ export const useToDo = defineStore("ToDo", () => {
   /// FONCTION RECHERCHE
   function filtrer(Search) {
     return tabTasks.value.filter((task) => {
-      return task.titre.match(Search);
+      return task.nom_candidat.match(Search);
     });
   }
 
@@ -45,7 +44,6 @@ export const useToDo = defineStore("ToDo", () => {
     axios
       .get(`${URL}/api/todo/${id}`)
       .then((response) => {
-        console.log("GET one Succes: ", response, response.data._id);
         titreModif.value = response.data.titre;
         commentaireModif.value = response.data.commentaire;
         dateModif.value = response.data.date;
@@ -68,7 +66,6 @@ export const useToDo = defineStore("ToDo", () => {
     axios
       .put(`${URL}/api/todo/${idModif.value}`, formData)
       .then((response) => {
-        console.log("Succès de PUT :", response);
         Messages.messageSucces = response.data.message;
         setTimeout(() => {
           Messages.messageSucces = "";
@@ -99,11 +96,9 @@ export const useToDo = defineStore("ToDo", () => {
       status: status.value,
       date: date.value,
     };
-    console.log("FORMDATA :", formData);
     axios
       .post(`${URL}/api/todo/post`, formData)
       .then((response) => {
-        console.log("Succès de POST :", response);
         Messages.messageSucces = response.data.message;
         setTimeout(() => {
           Messages.messageSucces = "";
@@ -125,25 +120,21 @@ export const useToDo = defineStore("ToDo", () => {
   /// Changer StyleCSS
   function toggleColor(id, s) {
     const status = Boolean(!s);
-    console.log(status);
     axios
       .put(`${URL}/api/todo/status/${id}/${status}`)
-      .then((response) => {
-        console.log("Toggle :", response);
+      .then(() => {
         getAlltasks();
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   }
 
   /// FONCTION SUPPRIMER
   function suppr(id) {
-    console.log(id);
     axios
       .delete(`${URL}/api/todo/${id}`)
       .then((response) => {
-        console.log("SUCCES de DELETE One:", response);
         Messages.messageSucces = response.data.message;
         setTimeout(() => {
           Messages.messageSucces = "";
