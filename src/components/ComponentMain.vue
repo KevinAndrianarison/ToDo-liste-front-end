@@ -7,6 +7,7 @@ import { useToDo } from "@/stores/ToDo";
 /// DEFINITION DES VARIABLES
 const ToDo = useToDo();
 
+
 onBeforeMount(() => {
   ToDo.getAlltasks();
 });
@@ -59,11 +60,12 @@ onBeforeMount(() => {
 
     <!-- LISTE SANS RECHERCHE  -->
 
-    <div class="array" v-if="ToDo.Search === null">
+    <div class="array">
       <input
         type="text"
         class="recherche form-control"
         v-model="ToDo.Search"
+        @input="ToDo.filtrer(ToDo.Search)"
         id=""
         aria-describedby="emailHelp"
         placeholder="Rechercher ici..."
@@ -89,38 +91,6 @@ onBeforeMount(() => {
           </TransitionGroup>
         </ul>
       </div>
-    </div>
-
-    <!-- LISTE AVEC RECHERCHE  -->
-
-    <div class="array" v-if="ToDo.Search != null">
-      <input
-        type="text"
-        class="recherche form-control"
-        v-model="ToDo.Search"
-        id=""
-        aria-describedby="emailHelp"
-        placeholder="Rechercher ici..."
-      />
-      <div class="listtitle">
-        <h5>Liste des tâches :</h5>
-      </div>
-      <ul class="liSte list-group mt-4">
-        <TransitionGroup tag="ul" name="fade" class="container">
-          <li
-            :key="index"
-            v-for="(tabTask, index) in ToDo.filtrer(ToDo.Search).reverse()"
-            class="list-group-item d-flex justify-content-between align-items-center"
-          >
-            <ComponentItems
-              :id="tabTask._id"
-              :tabTask="tabTask.titre"
-              :date="tabTask.date"
-              :status="tabTask.status"
-            ></ComponentItems>
-          </li>
-        </TransitionGroup>
-      </ul>
     </div>
   </div>
 </template>

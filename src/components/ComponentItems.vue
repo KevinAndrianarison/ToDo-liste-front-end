@@ -13,11 +13,12 @@ defineProps(["id", "tabTask", "date", "status"]);
       class="form-check-input"
       type="checkbox"
       id="id"
+      :checked="status ? true : false"
     />
   </div>
   <div class="items">
     <div class="content form-check form-check-inline">
-      <p class="title" :class="{ red: !status ? true : false }">
+      <p class="title" :class="{ red: status ? true : false }">
         {{ tabTask }}
       </p>
       <p class="date">{{ date }}</p>

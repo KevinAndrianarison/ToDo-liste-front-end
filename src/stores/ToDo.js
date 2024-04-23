@@ -11,7 +11,7 @@ export const useToDo = defineStore("ToDo", () => {
 
   const titre = ref("");
   const commentaire = ref("");
-  const status = ref(true);
+  const status = ref(false);
   const date = ref(null);
   const titreModif = ref("");
   const commentaireModif = ref("");
@@ -24,6 +24,7 @@ export const useToDo = defineStore("ToDo", () => {
     axios
       .get(`${URL}/api/todo`)
       .then((response) => {
+        console.log(response.data);
         tabTasks.value = response.data;
       })
       .catch((error) => {
@@ -33,9 +34,13 @@ export const useToDo = defineStore("ToDo", () => {
 
   /// FONCTION RECHERCHE
   function filtrer(Search) {
-    return tabTasks.value.filter((task) => {
-      return task.nom_candidat.match(Search);
+    tabTasks.value = tabTasks.value.filter((task) => {
+      return task.titre.match(Search);
     });
+
+    if(Search === ""){
+      getAlltasks()
+    }
   }
 
   /// FONCTION AFFICHAGE MODALE
