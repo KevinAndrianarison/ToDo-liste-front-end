@@ -30,6 +30,8 @@
 .title {
     font-size: 16px;
     padding-top: 10px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .check {
@@ -48,26 +50,31 @@
 .Modifier:hover {
     background-color: white;
     color: rgb(13, 87, 226);
-    border: 1px rgb(13, 87, 226) solid;
-    font-weight: bold;
 
 }
 
 .Modifier {
     font-weight: bold;
     font-size: 12px;
+    border: 2px rgba(13, 88, 226, 0.183) solid;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .Supprimer:hover {
     background-color: white;
     color: rgb(217, 14, 14);
-    border: 1px rgb(217, 14, 14) solid;
-    font-weight: bold;
 }
 
 .Supprimer {
     font-weight: bold;
     font-size: 12px;
+    border: 2px rgba(217, 14, 14, 0.311) solid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+
+
 }
 
 .date {

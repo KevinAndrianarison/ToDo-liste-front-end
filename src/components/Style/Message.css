@@ -2,22 +2,20 @@
   position: fixed;
   bottom: 5px;
   z-index: 2;
-  width: 100vw;
 }
 
 .form-group {
   margin: 0 auto;
-  width: 16%;
 }
 
 .success {
-  background-color: rgb(9, 195, 9);
+  background-color: rgba(9, 195, 9, 0.923);
   color: white;
   border: none;
 }
 
 .danger {
-  background-color: rgb(210, 13, 13);
+  background-color: rgba(210, 13, 13, 0.885);
   color: white;
 }
 

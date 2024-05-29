@@ -8,11 +8,17 @@ button {
   opacity: 0;
 }
 
+label {
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 
 .recherche {
-  width: 300px;
+  width: 250px;
   margin: 0 auto;
   font-size: 14px;
+  background-color: rgba(128, 128, 128, 0.172);
 }
 
 .fade-enter-active {
@@ -82,9 +88,11 @@ button {
   width: 370px;
   padding: 35px;
   padding-top: 0px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-top: 50px;
+  margin-bottom: 20px;
+
   height: 450px;
 
 }
@@ -127,8 +135,6 @@ h5 {
 .Enregistrer:hover {
   background-color: white;
   color: rgb(13, 87, 226);
-  border: 1px rgb(13, 87, 226) solid;
-  font-weight: bold;
 
 }
 
@@ -136,4 +142,9 @@ h5 {
 .Enregistrer {
   font-weight: bold;
   height: 15%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px rgb(13, 87, 226) solid;
+  font-weight: 600;
+
+
 }

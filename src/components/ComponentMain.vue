@@ -1,10 +1,8 @@
 <script setup>
-/// IMPORTATION DES MODULES et COMPOSANTS
 import ComponentItems from "./ComponentItems.vue";
 import { onBeforeMount } from "vue";
 import { useToDo } from "@/stores/ToDo";
 
-/// DEFINITION DES VARIABLES
 const ToDo = useToDo();
 
 
@@ -17,8 +15,8 @@ onBeforeMount(() => {
   <div class="body">
     <div class="form">
       <div>
-        <h5 class="Titre mt-4">Ajoutez une tâche !</h5>
-        <label for="task" class="form-label mt-4">Titre : </label>
+        <h5 class="Titre mt-4">✨ Ajoutez une tâche !</h5>
+        <label for="task" class="form-label mt-4">🏷️ Titre : </label>
         <input
           v-model="ToDo.titre"
           type="text"
@@ -29,7 +27,7 @@ onBeforeMount(() => {
       </div>
       <div class="form-group">
         <label for="exampleTextarea" class="form-label mt-2"
-          >Description :</label
+          >📝 Description :</label
         >
         <textarea
           class="form-control"
@@ -38,7 +36,7 @@ onBeforeMount(() => {
           rows="3"
         ></textarea>
       </div>
-      <label for="task" class="form-label mt-2">Date : </label>
+      <label for="task" class="form-label mt-2">🗓️ Date : </label>
       <input
         v-model="ToDo.date"
         type="date"
@@ -53,12 +51,11 @@ onBeforeMount(() => {
           :disabled="!ToDo.titre || !ToDo.commentaire || !ToDo.date"
           class="Enregistrer btn btn-primary mt-4"
         >
-          Enregistrer
+        ➕ Enregistrer
         </button>
       </div>
     </div>
 
-    <!-- LISTE SANS RECHERCHE  -->
 
     <div class="array">
       <input
@@ -68,10 +65,10 @@ onBeforeMount(() => {
         @input="ToDo.filtrer(ToDo.Search)"
         id=""
         aria-describedby="emailHelp"
-        placeholder="Rechercher ici..."
+        placeholder="🔍 Rechercher ici..."
       />
       <div class="listtitle">
-        <h5>Liste des tâches :</h5>
+        <h5>📌 Liste des tâches :</h5>
       </div>
       <div class="liSte">
         <ul class="list-group mt-2">

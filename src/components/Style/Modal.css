@@ -13,13 +13,13 @@
 .Modifier:hover {
   background-color: white;
   color: rgb(13, 87, 226);
-  border: 1px rgb(13, 87, 226) solid;
-  font-weight: bold;
 
 }
 
 .Modifier {
   font-weight: bold;
+  border: 2px rgba(13, 88, 226, 0.23) solid;
+  font-weight: 600;
   height: 15%;
 }
 
@@ -44,12 +44,13 @@
   color: white;
   font-weight: bold;
   height: 15%;
+  border: 2px rgb(255, 183, 0) solid;
+
 }
 
 .Annuller:hover {
   background-color: white;
   color: rgb(255, 183, 0);
-  border: 1px rgb(255, 183, 0) solid;
 }
 
 

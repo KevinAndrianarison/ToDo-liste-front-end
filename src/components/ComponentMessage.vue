@@ -7,22 +7,16 @@ const Messages = useMessages();
   <div class="alert">
     <Transition>
       <div class="form-group has-success" v-if="Messages.messageSucces">
-        <input
-          type="text"
-          class="success form-control is-valid"
-          id="inputValid"
-          v-model="Messages.messageSucces"
-        />
+        <div class="success form-control is-valid">
+          {{ Messages.messageSucces }}
+        </div>
       </div>
     </Transition>
     <Transition>
       <div class="form-group has-danger" v-if="Messages.messageError">
-        <input
-          type="text"
-          class="danger form-control is-invalid"
-          id="inputInvalid"
-          v-model="Messages.messageError"
-        />
+        <div class="danger form-control is-invalid">
+          {{ Messages.messageError }}
+        </div>
       </div>
     </Transition>
   </div>

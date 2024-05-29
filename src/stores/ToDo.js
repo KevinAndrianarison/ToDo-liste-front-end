@@ -6,6 +6,7 @@ import { useMessages } from "./Messages";
 
 export const useToDo = defineStore("ToDo", () => {
   const tabTasks = ref([]);
+  const tabTasksTemp = ref([]);
   const URL = useUrl().url;
   const Messages = useMessages();
 
@@ -26,16 +27,18 @@ export const useToDo = defineStore("ToDo", () => {
       .then((response) => {
         console.log(response.data);
         tabTasks.value = response.data;
+        tabTasksTemp.value = response.data;
+
       })
       .catch((error) => {
         console.error("Erreur du GET All :", error);
       });
   }
 
-  /// FONCTION RECHERCHE
   function filtrer(Search) {
+    tabTasks.value = tabTasksTemp.value
     tabTasks.value = tabTasks.value.filter((task) => {
-      return task.titre.match(Search);
+      return task.titre.toLocaleLowerCase().match(Search.toLocaleLowerCase());
     });
 
     if(Search === ""){
@@ -43,7 +46,6 @@ export const useToDo = defineStore("ToDo", () => {
     }
   }
 
-  /// FONCTION AFFICHAGE MODALE
   function affichage(id) {
     openModal.value = true;
     axios
@@ -59,7 +61,6 @@ export const useToDo = defineStore("ToDo", () => {
       });
   }
 
-  /// FONCTION MODIFIER UNE TACHE
   function Modifier() {
     const formData = {
       id: idModif.value,
@@ -88,12 +89,10 @@ export const useToDo = defineStore("ToDo", () => {
     Search.value = null;
   }
 
-  /// FONCTION ANNULLER
   function anuller() {
     openModal.value = false;
   }
 
-  /// FONCTION AJOUTER
   function valider() {
     const formData = {
       titre: titre.value,
@@ -122,7 +121,6 @@ export const useToDo = defineStore("ToDo", () => {
     date.value = null;
   }
 
-  /// Changer StyleCSS
   function toggleColor(id, s) {
     const status = Boolean(!s);
     axios
@@ -135,7 +133,6 @@ export const useToDo = defineStore("ToDo", () => {
       });
   }
 
-  /// FONCTION SUPPRIMER
   function suppr(id) {
     axios
       .delete(`${URL}/api/todo/${id}`)
@@ -166,6 +163,7 @@ export const useToDo = defineStore("ToDo", () => {
     dateModif,
     idModif,
     openModal,
+    tabTasksTemp,
     Search,
     filtrer,
     affichage,
